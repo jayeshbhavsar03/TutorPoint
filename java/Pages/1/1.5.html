@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TutorPoint</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../External CSS JS/index.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap-5.2.2-dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+        /* code area css start */
+        .code-area {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mycodebox {
+            background-color: #212121;
+            color: #00ff00;
+            font-size: 16px;
+            margin: 0px;
+            padding: 10px 0px;
+        }
+
+        .myoutputbox {
+            background-color: #212121;
+            color: white;
+            font-size: 16px;
+            margin: 0px;
+            padding: 10px 0px;
+        }
+
+        /* code area css end */
+
+        .left {
+            border-radius: 20px;
+        }
+
+        .right {
+            float: right;
+            border-radius: 20px;
+        }
+
+        h3 {
+            font: bolder;
+        }
+
+        h4 {
+            font-weight: 400;
+            color: #0d6efd;
+        }
+
+        h5 {
+            font-weight: 400;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ************************************************** Navbar Start ************************************************** -->
+    <nav class="navbar navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TutorPoint</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas bg-primary offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel bg-ho"> TutorPoint</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" id="bg-ho" href="/Home/Html/index.html"><i
+                                    class="fa fa-home"></i>&nbsp; Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                1. Java Tutorial
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.1.html">1.1 What is
+                                        Java?</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.2.html">1.2 History of
+                                        Java</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.3.html">1.3 Features of
+                                        Java</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.4.html">1.4 C++ vs
+                                        Java</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.5.html">1.5 Hello Java
+                                        Program</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.6.html">1.6 Program
+                                        Internal</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.7.html">1.7 How to set a
+                                        path?</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.8.html">1.8 JDK, JRE and
+                                        JVM</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.9.html">1.9 JVM: Java
+                                        Virtual Machine</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.10.html">1.10 Java
+                                        Variable</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.11.html">1.11 Java Data
+                                        Types</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.12.html">1.12 unicode
+                                        System</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.13.html">1.13
+                                        Operators</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/1/1.14.html">1.14 Keywords</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Control Statements
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.1.html">Java Control Statements</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.2.html">Java if-else</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.3.html">Java Switch</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.4.html">Java For Loop</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.5.html">Java While Loop</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.6.html">Java Do While Loop</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.7.html">Java Break</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.8.html">Java Continue</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.9.html">Java Comments</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/2/2.10.html">Java Programs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Objects Class
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/3/3.1.html">Java OOPs Concepts</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/3/3.2.html">Naming Convention</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/3/3.3.html">Object Class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/3/3.4.html">Method</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/3/3.5.html">Constructor</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/3/3.6.html">Static Keyword</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/3/3.7.html">This Keyword</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Inheritance
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/4/4.1.html">Inheritance(IS-A)</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/4/4.2.html">Aggregation(HAS-A)</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Polymorphism
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.1.html">Method Overloading</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.2.html">Method Overriding</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.3.html">Covariant Return Tyoe</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.4.html">Super Keyword</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.5.html">Instance Initializer Block</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.6.html">Final Keyword</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.7.html">Runtime Polymorphism</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.8.html">Dynamic Binding</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/5/5.9.html">Instance of Operator</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Abstraction
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/6/6.1.html">Abstract class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/6/6.2.html">Interface</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/6/6.3.html">Abstract vs Interface</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Encapsulation
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/7/7.1.html">Package</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/7/7.2.html">Access Modifiers</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/7/7.3.html">Encapsulation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Array
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/8/8.1.html">Java Array</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java OOPs Misc
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.1.html">Object class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.2.html">Object Cloning</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.3.html">Math class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.4.html">Wrapper Class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.5.html">Java Recursion</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.6.html">Call By Value</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.7.html">Strictfp Keyword</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.8.html">Javadoc tool</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.9.html">Command Line Arg</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.10.html">Object vs Class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/9/9.11.html">Overloading</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java String & Methods
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.1.html">What is String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.2.html">Immutable String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.3.html">String Comparison</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.4.html">String Concatenation</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.5.html">Substring</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.6.html">Method of String class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.7.html">StringBuffer class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.8.html">StringBuilder class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.9.html">String vs StringBuffer</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.10.html">StringBuffer vs Builder</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.11.html">Creating Immutable class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.12.html">toString method</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.13.html">StringTonizer class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.14.html">String charAt()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.15.html">String compareTo()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.16.html">String concat()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.17.html">String contains()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.18.html">String endsWith()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.19.html">String equals()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.20.html">equalsIgnoreCase()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.21.html">String format()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.22.html">String getByte()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.23.html">String getChars()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.24.html">String indexOf()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.25.html">String intern()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.26.html">String isEmpty()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.27.html">String join()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.28.html">String lastIndexOf()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.29.html">String length()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.30.html">String replace()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.31.html">String replaceAll()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.32.html">String split()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.33.html">String startWith()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.34.html">String substring()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.35.html">String toCharArray()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.36.html">String toLowerCase()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.37.html">String toUpperCase()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.38.html">String trim()</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/10/10.39.html">String valueOf()</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Regex
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/11/11.1.html">Java Regex API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Exception Handling
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.1.html">Java Exception</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.2.html">Java Try-cath block</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.3.html">Java Multiple cath Block</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.4.html">Java Nested try</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.5.html">Java Finally Block</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.6.html">Java Throw keyword</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.7.html">Java Exception Propagation</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.8.html">Java Throw Keyword</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.9.html">Java Throw vs Throws</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.10.html">Final vs Finally vs Finalize</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.11.html">Exception Handling vs Method
+                                        Overriding</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/12/12.12.html">Java Custom Exception</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Inner class
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/13/13.1.html">What is inner class?</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/13/13.2.html">Member Inner class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/13/13.3.html">Anonymous Inner class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/13/13.4.html">Local Inner class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/13/13.5.html">static nested class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/13/13.6.html">Nested Interface</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Multithreading
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.1.html">What is Multithreading?</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.2.html">Life Cycle of a Thread</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.3.html">How to Create Thread</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.4.html">Thread Scheduler</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.5.html">Sleeping a thread</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.6.html">Start a thread twice</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.7.html">Calling run() method</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.8.html">joining a theread</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.9.html">Naming a thread</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.10.html">Thread Priority</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.11.html">Daemon Thread</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.12.html">Thread Pool</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.13.html">Thread Group</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.14.html">ShutdownHook</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.15.html">Performing multiple task</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.16.html">Grabage Collection</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/14/14.17.html">Runtime Class</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Syncroniztion
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/15/15.1.html">Syncroniztion in java</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/15/15.2.html">Syncronized block</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/15/15.3.html">Static Syncroniztion</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/15/15.4.html">Deadlock in Java</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/15/15.5.html">Inter-thread Comm</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/15/15.6.html">Interrupting Thread</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/15/15.7.html">Reentrant Monitor</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java I/O
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.1.html">Java Input/Output</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.2.html">FileOutputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.3.html">FileInputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.4.html">BufferedOutputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.5.html">BufferedInputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.6.html">SequenceInputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.7.html">ByteArrayOutputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.8.html">ByteArrayInputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.9.html">DataOutputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.10.html">DataInputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.11.html">Java FilterOutputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.12.html">Java FilterInputStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.13.html">Java ObjectStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.14.html">Java ObjectStreamField</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.15.html">Console</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.16.html">FilePermission</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.17.html">Writer</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.18.html">Reader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.19.html">FileWriter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.20.html">FileReader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.21.html">BufferedWriter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.22.html">BufferedReader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.23.html">CharArrayReader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.24.html">CharArrayWriter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.25.html">PrintStream</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.26.html">PrintWriter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.27.html">OutputStreamWriter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.28.html">InputStreamReader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.29.html">PushbackInputStram</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.30.html">PushbackReader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.31.html">StringWriter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.32.html">StringReader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.33.html">PipedWriter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.34.html">PipedReader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.35.html">FilterWriter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.36.html">FilterReader</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.37.html">File</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.38.html">FileDescriptor</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.39.html">RandomAccessFile</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.40.html">Java.util.Scanner</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.41.html">Java Serializtion</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/16/16.42.html">Java transient keyword</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Networking
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/17/17.1.html">Networking Concepts</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/17/17.2.html">Socket Programing</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/17/17.3.html">URL class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/17/17.4.html">URLConnection class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/17/17.5.html">HttpURLConnection</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/17/17.6.html">InetAddress class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/17/17.7.html">DatagramSocket class</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java AWT & Events
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.1.html">AWT Basics</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.2.html">Event Handling</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.3.html">AWT Button</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.4.html">AWT Lable</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.5.html">AWT TextField</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.6.html">AWT TextArea</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.7.html">AWT Checkbox</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.8.html">AWT CheckboxGroup</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.9.html">AWT Choice</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.10.html">AWT List</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.11.html">AWT Canvas</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.12.html">AWT Scrollbar</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.13.html">AWT Menultem & Menu</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.14.html">AWT PopupMenu</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.15.html">AWT Panel</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.16.html">AWT Dialog</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.17.html">AWT Toolkit</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.18.html">Java ActionListener</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.19.html">Java MouseListener</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.20.html">MouseMotionListener</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.21.html">Java ItemListener</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.22.html">Java KeyListener</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.23.html">Java WindowListener</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.24.html">Java Adapter classes</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/18/3.25.html">close AWT Window</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Swing
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.1.html">Swing Introduction</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.2.html">Java JButton</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.3.html">Java JLabel</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.4.html">Java JtextField</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.5.html">Java JTextArea</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.6.html">Java JPasswordField</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.7.html">Java JCheckBox</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.8.html">Java JRadioButton</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.9.html">Java JComboBox</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.10.html">Java JTable</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.11.html">Java JList</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.12.html">Java JOptionPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.13.html">Java JScrollBar</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.14.html">Java JMenuItem & JMenu</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.15.html">Java JPopupMenu</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.16.html">Java JCheckBoxMenuItem</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.17.html">Java JSeprator</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.18.html">Java JprogressBar</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.19.html">Java JTree</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.20.html">Java JColorChooser</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.21.html">Java JTabbedPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.22.html">Java JSlider</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.23.html">Java JSpinner</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.24.html">Java JDialog</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.25.html">Java JPanel</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.26.html">Java JFileChooser</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.27.html">Java JToggleButton</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.28.html">Java JToolBar</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.29.html">Java JViewport</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.30.html">Java JFrame</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.31.html">Java JComponent</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.32.html">Java JLayeredPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.33.html">Java JDesktopPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.34.html">Java JEditorPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.35.html">Java JScrollPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.36.html">Java JSplitPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.37.html">Java JTextPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.38.html">Java JRootPane</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.39.html">Using ToolTip</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.40.html">Change Title Icon</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.41.html">Executable Jar File</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.42.html">Digital Watch</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.43.html">Graphics in swing</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/19/19.44.html">Displaying Image</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Swing Apps
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.1.html">Notepad</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.2.html">Calculator</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.3.html">IP Finder</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.4.html">Word Counter</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.5.html">URL Source Generator</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.6.html">Folder Explorer</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.7.html">Puzzle</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.8.html">Pic Puzzle Game</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.9.html">Tic Tac Toe Game</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/20/20.10.html">Online Exam</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                LayoutManagers
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.1.html">BorderLayout</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.2.html">GridLayout</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.3.html">FlowLayout</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.4.html">BoxLaout</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.5.html">CardLayout</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.6.html">GridBagLayout</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.7.html">GroupLayout</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.8.html">SpringLayout</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/21/21.9.html">ScrollPaneLayout</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Applet
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.1.html">Applet Basics</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.2.html">Graphics in Applet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.3.html">Displaying image in Applet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.4.html">Animation in Applet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.5.html">EventHandlling in Applet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.6.html">JApplet class</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.7.html">Painting in Applet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.8.html">Digital Clock in Applet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.9.html">Analog Clock in Applet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.10.html">Parameter in Applet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/22/22.11.html">Applet Communication</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Reflection
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/23/23.1.html">Reflection API</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/23/23.2.html">newInstance() method</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/23/23.3.html">Javap tool</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/23/23.4.html">creating javap tool</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/23/23.5.html">creating appletviewer</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/23/23.6.html">Call private method</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Date Time
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.1.html">Java Date Time API</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.2.html">Java LocalDate</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.3.html">Java LocalTime</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.4.html">Java LocalDateTime</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.5.html">Java MonthDay</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.6.html">Java OffsetTime</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.7.html">Java OffsetDateTime</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.8.html">Java Clock</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.9.html">Java ZonedDateTime</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.10.html">Java ZoneId</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.11.html">Java ZoneOffset</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.12.html">Java Year</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.13.html">Java YearMonth</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.14.html">Java Period</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.15.html">Java Duration</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.16.html">Java Instant</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.17.html">Java DayOfWeek enum</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.18.html">Java Month enum</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.19.html">java.util.Date</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.20.html">java.sql.Date</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.21.html">Java Calender</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.22.html">Java TimeZone</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.23.html">DateFormat</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.24.html">SimpleDateFormat</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/24/24.25.html">Get Current Date Time</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Conversion
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.1.html">Java String to int</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.2.html">Java int to String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.3.html">Java String to long</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.4.html">Java long to String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.5.html">Java String to float</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.6.html">Java float to String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.7.html">Java String to double</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.8.html">Java double to String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.9.html">Java String to Date</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.10.html">Java Date to String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.11.html">Java String to char</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.12.html">Java char to String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.13.html">Java String to Object</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.14.html">Java Object to String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.15.html">Java int to long</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.16.html">Java long to int</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.17.html">Java int to double</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.18.html">Java double to int</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.19.html">Java char to int</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.20.html">Java int to char</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.21.html">Java String to boolean</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.22.html">Java boolean to String</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.23.html">Date to Timestamp</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.24.html">Timestamp to Date</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.25.html">Binary to Decimal</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.26.html">Decimal to Binary</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.27.html">Hex to Decimal</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.28.html">Decimal to Hex</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.29.html">Octal to Decimal</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/25/25.30.html">Decimal to Octal</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Java JDBC
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.1.html">JDBC Introduction</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.2.html">JDBC Driver</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.3.html">DB Connectivity Steps</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.4.html">Connectivity with Oracle</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.5.html">Connectivity with MySql</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.6.html">Access without DSN</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.7.html">DriverManager</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.8.html">Connection</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.9.html">Statement</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.10.html">ResultSet</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.11.html">PreparedStatement</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.12.html">ResultSetMetaDate</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.13.html">DatabaseMetaData</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.14.html">Store image</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.15.html">Retrieve image</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.16.html">Store file</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.17.html">Retrive file</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.18.html">CallableStament</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.19.html">Transaction Mangement</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.20.html">Batch Processing</a></li>
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/26/26.21.html">Rowset Interface</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                RMI
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 bg-primary">
+                                <li><a class="dropdown-item text-white" href="/Java/Pages/27/27.1.html">Java RMI</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ************************************************** Navbar End ************************************************** -->
+
+    <!-- ************************************************** Main Body Start ************************************************** -->
+    <Div class="container">
+        <Div class="mt-5 pt-2">
+            <h3>First Java Program | Hello World Example</h3>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;In this section, we will learn how to write the simple program of Java. We can write a simple hello Java program easily after installing the JDK.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;To create a simple Java program, you need to create a class that contains the main method. Let's understand the requirement first.</p>
+            <h4>The requirement for Java Hello World Example</h4>
+            <p>For executing any Java program, the following software or application must be properly installed.</p>
+            <ul>
+                <li>Install the JDK if you don't have installed it, download the JDK and install it.</li>
+                <li>Set path of the jdk/bin directory.</li>
+                <li>Create the Java program</li>
+                <li>Compile and run the Java program</li>
+            </ul>
+            <h4>Creating Hello World Example</h4>
+            <p>Let's create the hello java program:</p>
+            <!-- code area start -->
+            <div class="code-area">
+                <pre class="mycodebox">
+    class Simple{  
+        public static void main(String args[]){  
+         System.out.println("Hello Java");  
+        }  
+    }   
+                </pre>
+            </div>
+            <!-- code area end -->
+            <p>Save the above file as Simple.java.</p>
+            <h6>To compile:</h6>
+            <p>javac Simple.java</p>
+            <h6>To execute:</h6>
+            <p>java Simple</p>
+            <h6>Output:</h6>
+            <!-- code area Start -->
+            <div class="code-area">
+                <pre class="myoutputbox">
+    Hello Java
+                </pre>
+            </div>
+            <!-- code area end -->
+            <br>
+            <h6>Compilation Flow:</h6>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;When we compile Java program using javac tool, the Java compiler converts the source code into byte code.</p>
+            <img src="/Java/Img/javacodecompile.png" class="rounded mx-auto d-block py-2" alt="James_Gosling">
+            <h4>Parameters used in First Java Program</h4>
+            <p>Let's see what is the meaning of class, public, static, void, main, String[], System.out.println().</p>
+            <ul>
+                <li><b>class</b> keyword is used to declare a class in Java.</li>
+                <li><b>public</b> keyword is an access modifier that represents visibility. It means it is visible to all.</li>
+                <li><b>static</b> is a keyword. If we declare any method as static, it is known as the static method. The core advantage of the static method is that there is no need to create an object to invoke the static method. The main() method is executed by the JVM, so it doesn't require creating an object to invoke the main() method. So, it saves memory.</li>
+                <li><b>void</b> is the return type of the method. It means it doesn't return any value.</li>
+                <li><b>main</b> represents the starting point of the program.</li>
+                <li><b>String[] args</b> or <b>String args[]</b> is used for command line argument. We will discuss it in coming section.</li>
+                <li><b>System.out.println()</b> is used to print statement. Here, System is a class, out is an object of the PrintStream class, println() is a method of the PrintStream class. We will discuss the internal working of System.out.println() statement in the coming section.</li>
+            </ul>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;To write the simple program, you need to open notepad by <b>start menu -> All Programs -> Accessories -> Notepad</b> and write a simple program as we have shownbelow:</p>
+            <img src="/Java/Img/simpleprogram.jpg" class="rounded mx-auto d-block py-2" alt="James_Gosling">
+            <p>As displayed in the above diagram, write the simple program of Java in notepad and saved it as Simple.java. In order to compile and run the above program, you need to open the command prompt by <b>start menu -> All Programs -> Accessories -> command prompt.</b> When we have done with all the steps properly, it shows the following output:</p>
+            <img src="/Java/Img/simpleprogram2.jpg" class="rounded mx-auto d-block py-2" alt="James_Gosling">
+            <p>To compile and run the above program, go to your current directory first; my current directory is c:\new. Write here:</p>
+            <h6>To compile:</h6>
+            <p>javac Simple.java</p>
+            <h6>To execute:</h6>
+            <p>java Simple</p>
+            <h4>In how many ways we can write a Java program?</h4>
+            <p>There are many ways to write a Java program. The modifications that can be done in a Java program are given below:</p>
+            <p><b>1) By changing the sequence of the modifiers, method prototype is not changed in Java.</b></p>
+            <p>Let's see the simple code of the main method.</p>
+            <!-- code area start -->
+            <div class="code-area">
+                <pre class="mycodebox">
+    static public void main(String args[])    
+                </pre>
+            </div>
+            <!-- code area end -->
+            <br>
+            <p><b>2) The subscript notation in the Java array can be used after type, before the variable or after the variable.</b></p>
+            <p>Let's see the different codes to write the main method.</p>
+            <!-- code area start -->
+            <div class="code-area">
+                <pre class="mycodebox">
+    public static void main(String[] args)  
+    public static void main(String []args)  
+    public static void main(String args[])    
+                </pre>
+            </div>
+            <!-- code area end -->
+            <br>
+            <p><b>3) You can provide var-args support to the main() method by passing 3 ellipses (dots)</b></p>
+            <p>Let's see the simple code of using var-args in the main() method. We will learn about var-args later in the Java New Features chapter.</p>
+            <!-- code area start -->
+            <div class="code-area">
+                <pre class="mycodebox">
+    public static void main(String... args)      
+                </pre>
+            </div>
+            <!-- code area end -->
+            <br>
+            <p><b>4) Having a semicolon at the end of class is optional in Java.</b></p>
+            <p>Let's see the simple code.</p>
+            <!-- code area start -->
+            <div class="code-area">
+                <pre class="mycodebox">
+    class A{  
+    static public void main(String... args){  
+    System.out.println("hello java4");  
+    }  
+    };   
+                </pre>
+            </div>
+            <!-- code area end -->
+            <br>
+            <h4>Valid Java main() method signature</h4>
+            <!-- code area start -->
+            <div class="code-area">
+                <pre class="mycodebox">
+    public static void main(String []args)  
+    public static void main(String args[])  
+    public static void main(String... args)  
+    static public void main(String[] args)  
+    public static final void main(String[] args)  
+    final public static void main(String[] args)  
+    final strictfp public static void main(String[] args)    
+    public static void main(String[] args)  
+                </pre>
+            </div>
+            <!-- code area end -->
+            <br>
+            <h4>Invalid Java main() method signature</h4>
+            <!-- code area start -->
+            <div class="code-area">
+                <pre class="mycodebox">
+    public void main(String[] args)  
+    static void main(String[] args)  
+    public void static main(String[] args)  
+    abstract public static void main(String[] args)   
+                </pre>
+            </div>
+            <!-- code area end -->
+            <br>
+            <h4>Resolving an error "javac is not recognized as an internal or external command"?</h4>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;If there occurs a problem like displayed in the below figure, you need to set a path. Since DOS doesn't recognize javac and java as internal or external command. To overcome this problem, we need to set a path. The path is not required in a case where you save your program inside the JDK/bin directory. However, it is an excellent approach to set the path. Click here for How to set path in java</p>
+            <img src="/Java/Img/simpleprogram3.jpg" class="rounded mx-auto d-block py-2" alt="James_Gosling">
+            <a href="/Java/Pages/1/1.4.html" class="btn btn-primary btn-sm left ">← Prev</a>
+            <a href="/Java/Pages/1/1.6.html" class="btn btn-primary btn-sm right ">Next →</a>
+        </Div>
+    </Div>
+    <!-- ************************************************** Main Body End ************************************************** -->
+
+
+    <!-- ************************************************** Footer Start ************************************************** -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mb-3 mb-md-0 text-primary">&copy; 2022 TutorPoint</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-instagram"
+                            style="color: #0d6efd;"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-linkedin"
+                            style="color: #0d6efd;"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-github"
+                            style="color: #0d6efd;"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- ************************************************** Footer End ************************************************** -->
+
+    <!-- Bootstrap JavaScript & jQuery -->
+    <script src="/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
